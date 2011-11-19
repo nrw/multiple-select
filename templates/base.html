@@ -3,10 +3,13 @@
   <head> 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
     <title>{title}</title> 
+    <link rel="stylesheet" type="text/css" href="{baseURL}/static/style/bootstrap.min.css">
   </head> 
-  <body> 
-    <div id="content">
-      {content|s}
+  <body>
+    <div class="container">
+      <div id="content">
+        {content|s}
+      </div>
     </div>
     <script src="{baseURL}/static/js/jquery-1.5.2.min.js"></script>
     <script src="{baseURL}/static/js/json2.js"></script>

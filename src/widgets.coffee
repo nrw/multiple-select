@@ -19,16 +19,15 @@ exports.multicheckbox = (options) ->
       html += "</div>"
     
     w.clientInit = (field, path, value, raw, errors, options) ->
-      $(@id).click (event) ->
-        if event.target.type is "checkbox"
-          selections = $("#" + this.id ' input[type=hidden]').first()
-          list = JSON.parse(selections.attr "value")
+      el = $('#' + @id + ' input[type=hidden]').first()
+      $('#' + @id + ' input[type=checkbox]').change (event) ->
+          list = JSON.parse(el.attr "value")
           box = event.target
           index = list.indexOf box.value
           if box.checked and index is -1
             list.push box.value
           else if index isnt -1
             list = _.reject list, (id) -> id == box.value
-          selections.attr "value", JSON.stringify(list)
+          el.val JSON.stringify(list)
           
     return w

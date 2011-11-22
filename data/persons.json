@@ -1,0 +1,5 @@
+[
+{"type":"person","name":"Foo","_id":"e3d4bcf75c8a017ea01774e37b72f970"},
+{"type":"person","name":"Bar","_id":"e3d4bcf75c8a017ea01774e37b72fa1b"},
+{"type":"person","name":"Baz","_id":"e3d4bcf75c8a017ea01774e37b7309ad"}
+]
